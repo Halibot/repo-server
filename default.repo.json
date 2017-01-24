@@ -1,0 +1,107 @@
+{
+	"mastermind": {
+		"tarball": "packages/mastermind.tgz",
+		"description": "Play the classic game Mastermind in your comm channel!",
+		"source": "https://github.com/halibot-extra/mastermind"
+	},
+	"github": {
+		"tarball": "packages/github.tgz",
+		"description": "Reports on github repository activity",
+		"source": "https://github.com/halibot-extra/github"
+	},
+	"spell": {
+		"tarball": "packages/spell.tgz",
+		"description": "Corrects your spelling, but not you're grammar!",
+		"source": "https://github.com/halibot-extra/spell"
+	},
+	"tz": {
+		"tarball": "packages/tz.tgz",
+		"description": "Figure out what time it is for someone, because living on a sphere is hard!",
+		"source": "https://github.com/halibot-extra/tz"
+	},
+	"btc": {
+		"tarball": "packages/btc.tgz",
+		"description": "Bitcoin price checker",
+		"source": "https://github.com/halibot-extra/btc"
+	},
+	"aa": {
+		"tarball": "packages/aa.tgz",
+		"description": "Displays ASCII renderings of images.",
+		"source": "https://github.com/halibot-extra/aa"
+	},
+	"dice": {
+		"tarball": "packages/dice.tgz",
+		"description": "Makes random numbers, sort of like rolling dice but less fun.",
+		"source": "https://github.com/halibot-extra/dice"
+	},
+	"feed": {
+		"tarball": "packages/feed.tgz",
+		"description": "RSS/atom feed client",
+		"source": "https://github.com/halibot-extra/feed"
+	},
+	"stackmemory": {
+		"tarball": "packages/stackmemory.tgz",
+		"description": "Remembers things for you using a stack.",
+		"source": "https://github.com/halibot-extra/stackmemory"
+	},
+	"timer": {
+		"tarball": "packages/timer.tgz",
+		"description": "A module that delays sending messages for a specified amount of time.",
+		"source": "https://github.com/halibot-extra/timer"
+	},
+	"aoe": {
+		"tarball": "packages/aoe.tgz",
+		"description": "A silly module to spew emotes from Age of Empires 2 by number.",
+		"source": "https://github.com/halibot-extra/aoe"
+	},
+	"quote": {
+		"tarball": "packages/quote.tgz",
+		"description": "Replies to commands with random quotes from a tarball file.",
+		"source": "https://github.com/halibot-extra/quote"
+	},
+	"adventure": {
+		"tarball": "packages/adventure.tgz",
+		"description": "Colossal cave adventure!",
+		"source": "https://github.com/halibot-extra/adventure"
+	},
+	"gwdaily": {
+		"tarball": "packages/gwdaily.tgz",
+		"description": "Report Guild Wars daily achievements.",
+		"source": "https://github.com/halibot-extra/gwdaily"
+	},
+	"emote": {
+		"tarball": "packages/emote.tgz",
+		"description": "A storage / retrieval system for custom emotes.",
+		"source": "https://github.com/halibot-extra/emote"
+	},
+	"gitlab": {
+		"tarball": "packages/gitlab.tgz",
+		"description": "Gitlab hooks for halibot.",
+		"source": "https://github.com/halibot-extra/gitlab"
+	},
+	"airports": {
+		"tarball": "packages/airports.tgz",
+		"description": "Retrieves airport status information.",
+		"source": "https://github.com/halibot-extra/airports"
+	},
+	"hangman": {
+		"tarball": "packages/hangman.tgz",
+		"description": "A vocabulary guessing game.",
+		"source": "https://github.com/halibot-extra/hangman"
+	},
+	"tictactoe": {
+		"tarball": "packages/tictactoe.tgz",
+		"description": "A futile game.",
+		"source": "https://github.com/halibot-extra/tictactoe"
+	},
+	"cli": {
+		"tarball": "packages/cli.tgz",
+		"description": "An agent that provides a command line interface for sending messages.",
+		"source": "https://github.com/halibot-extra/cli"
+	},
+	"adage": {
+		"tarball": "packages/adage.tgz",
+		"description": "Provides a random adage from a famous person or work via wikiquote.",
+		"source": "https://github.com/halibot-extra/adage"
+	}
+}
