@@ -7,7 +7,8 @@ def h_serve(args):
 
 def h_update(args):
 	r = repo.Repo()
-	r.update()
+	if not r.update():
+		print('All packages up to date.')
 
 if __name__ == '__main__':
 	subcmds = {

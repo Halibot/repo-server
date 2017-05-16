@@ -46,7 +46,7 @@ class Repo():
 
 			if info.commit == gitr.head.commit:
 				# No update
-				return
+				return False
 		except:
 			# Failed to open the local git repo, clone from source
 			gitr = git.Repo.clone_from(pkg['source'], self.git_path(name))
@@ -67,8 +67,11 @@ class Repo():
 		tf.close()
 
 		print(name, 'updated')
+		return True
 		
 	def update(self):
+		updated = False
 		for name in self.packages.keys():
-			self.update_pkg(name)
+			updated = self.update_pkg(name) or updated
+		return updated
 
