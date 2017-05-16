@@ -2,7 +2,7 @@ import argparse
 import repo, server
 
 def h_serve(args):
-	s = server.RepoServer(repo.Repo())
+	s = server.RepoServer(repo.Repo(), keyfile=args.key, certfile=args.cert)
 	s.thread.join()
 
 def h_update(args):
@@ -21,6 +21,8 @@ if __name__ == '__main__':
 	sub = parser.add_subparsers(title='commands', dest='cmd', metavar='COMMAND')
 
 	serve = sub.add_parser('serve', help='run the server')
+	serve.add_argument('-k', '--key',  help='SSL/TLS private key file to use')
+	serve.add_argument('-c', '--cert', help='SSL/TLS certificate to use')
 	update = sub.add_parser('update', help='update the repository\'s packages from their sources')
 
 	args = parser.parse_args()

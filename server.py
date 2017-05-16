@@ -1,6 +1,6 @@
 import json
 import http.server
-import socketserver
+import socketserver, ssl
 from threading import Thread
 
 class RepoHandler(http.server.BaseHTTPRequestHandler):
@@ -40,15 +40,25 @@ class RepoHandler(http.server.BaseHTTPRequestHandler):
 
 class RepoServer():
 
-	def __init__(self, repo, port=4842): # 0x4842 = "HB"
+	def __init__(self, repo, keyfile=None, certfile=None, port=4842): # 0x4842 = "HB"
 		self.port = port
 		self.repo = repo
+		self.keyfile = keyfile
+		self.certfile = certfile
 		self.thread = Thread(target=self.run)
 		self.thread.start()
 
 	def run(self):
 		Handler = RepoHandler
 		self.httpd = socketserver.TCPServer(("", self.port), Handler)
+
+		if self.keyfile != None:
+			self.httpd.socket = ssl.wrap_socket( self.httpd.socket
+			                                   , keyfile=self.keyfile
+			                                   , certfile=self.certfile
+			                                   , server_side=True
+			                                   )
+
 		self.httpd.repo = self.repo
 		self.httpd.serve_forever()
 
