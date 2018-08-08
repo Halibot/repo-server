@@ -40,11 +40,12 @@ class RepoHandler(http.server.BaseHTTPRequestHandler):
 
 class RepoServer():
 
-	def __init__(self, repo, keyfile=None, certfile=None, port=4842): # 0x4842 = "HB"
+	def __init__(self, repo, keyfile=None, certfile=None, ca_certs=None, port=4842): # 0x4842 = "HB"
 		self.port = port
 		self.repo = repo
 		self.keyfile = keyfile
 		self.certfile = certfile
+		self.ca_certs = ca_certs
 		self.thread = Thread(target=self.run)
 		self.thread.start()
 
@@ -56,6 +57,7 @@ class RepoServer():
 			self.httpd.socket = ssl.wrap_socket( self.httpd.socket
 			                                   , keyfile=self.keyfile
 			                                   , certfile=self.certfile
+			                                   , ca_certs=self.ca_certs
 			                                   , server_side=True
 			                                   )
 
