@@ -103,5 +103,10 @@
 		"tarball": "packages/adage.tgz",
 		"description": "Provides a random adage from a famous person or work via wikiquote.",
 		"source": "https://github.com/halibot-extra/adage"
+	},
+	"irc": {
+		"tarball": "packages/irc.tgz",
+		"description": "An agent that interfaces to IRC.",
+		"source": "https://github.com/halibot-extra/irc"
 	}
 }
